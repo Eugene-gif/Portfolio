@@ -1,0 +1,128 @@
+:root {
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::selection {
+    background: var(--bg-text2);
+    color: black;
+  }
+
+  &::-moz-selection {
+    background: var(--bg-text2);
+    color: black;
+  }
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  display: grid;
+  // font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  // font-family: "Trebuchet MS","Lucida Sans Unicode","Lucida Grande","Lucida Sans",Arial, sans-serif;
+  line-height: 1.3;
+  font-weight: 400;
+  grid-template-rows: 1fr min-content;
+  height: 100vh;
+  height: 100dvh;
+  overflow-x: hidden;
+}
+
+body._lock {
+  overflow-y: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0.5rem;
+  margin-bottom: 1.1rem;
+  // text-align: center;
+  text-wrap: balance;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #d2cfd7;
+  transition: all 0.2s;
+
+  @media(hover: hover) {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+h1 {
+  font-weight: 800;
+  font-size: clamp(2rem, 1.5417rem + 2.2917vw, 3.375rem);
+  text-align: center;
+  // font-size: clamp(32px, 3cqi, 54px);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1.4583rem + 1.4583vw, 2.625rem);
+  text-align: center;
+  // font-size: clamp(24px, 3cqi, 42px);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);
+  // font-size: clamp(24px, 3cqi, 36px);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 1.0833rem + 0.8333vw, 1.75rem);
+  // font-size: clamp(20px, 3cqi, 28px);
+}
+
+h5 {
+  font-size: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
+  // font-size: clamp(18px, 3cqi, 24px);
+  // margin: 5px ;
+}
+
+p {
+  margin-bottom: 0.6rem;
+  font-size: clamp(0.875rem, 0.7917rem + 0.4167vw, 1.125rem);
+}
+
+.base-layout {
+  margin-top: var(--header);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.container-fluid {
+  width: 100vw;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+}

@@ -1,0 +1,18 @@
+.footer {
+  width: 100%;
+  background-color: var(--bg);
+  color: var(--bg-text);
+  padding: 10px 0;
+
+  p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  &__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+}

@@ -1,0 +1,11 @@
+.page {
+  // width: clamp(30ch, 100%, 90ch);
+
+  &__section {
+    margin-bottom: 40px;
+  }
+}
+
+@import './_home.scss';
+@import './_catalog.scss';
+@import './_contacts.scss';

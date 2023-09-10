@@ -1,0 +1,39 @@
+.mask {
+  --bg: #23484E;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loader {
+    width: 75px;
+    height: 75px;
+    border: 10px solid var(--bg-text);
+    border-radius: 50%;
+    border-left-color: var(--active);
+    animation: loader 1.2s linear infinite;
+
+    @keyframes loader {
+      100% {
+        transform: rotate(360deg);
+      }
+
+      0% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &.hide {
+    opacity: 0;
+  }
+}

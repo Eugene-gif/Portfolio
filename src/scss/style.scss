@@ -1,0 +1,25 @@
+/* __________ utils __________ */
+@import "chunks/_theme.scss";
+@import "chunks/_switch-pages.scss";
+/* __________ /utils __________ */
+
+
+/* __________ chunks __________ */
+@import "chunks/_global";
+@import "chunks/_vars";
+@import "chunks/_fonts";
+@import "chunks/_icons";
+@import "@/scss/chunks/_loader.scss";
+/* __________ /chunks __________ */
+
+
+/*__________ Layouts __________*/
+@import "@/layouts/Header/_header.scss";
+@import "@/layouts/Footer/_footer.scss";
+
+/*__________ /Layouts __________*/
+
+
+/*__________ Page styles __________*/
+@import "@/pages/styles/_pages.scss";
+/*__________ /Page styles __________*/
