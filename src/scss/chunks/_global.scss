@@ -106,6 +106,9 @@ p {
   margin-top: var(--header);
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  @media(min-width: 640px) and (orientation: landscape) {
+    --header: 45px;
+  }
 }
 
 .container {

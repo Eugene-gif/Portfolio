@@ -28,8 +28,8 @@
   }
 
   &__logo {
-    width: 65px;
-    height: 65px;
+    width: var(--header);
+    height: var(--header);
 
     img {
       width: 100%;
@@ -37,6 +37,11 @@
       object-fit: contain;
       filter: drop-shadow(1px 1px 4px var(--active));
     }
+  }
+
+  &__theme-btn {
+    width: var(--header);
+    height: var(--header);
   }
 
   .nav {
@@ -61,6 +66,8 @@
       padding: 10px;
       margin-bottom: 20px;
     }
+
+    
 
     &__list {
       margin: 0 auto;
@@ -149,6 +156,15 @@
     }
   }
 
+  @media(min-width: 640px) and (orientation: landscape) {
+    --header: 45px;
+    .nav {
+      &__item a {
+        padding: 9.5px 0;
+      }
+    }
+  }
+
   .overlay {
     display: none;
     position: fixed;
@@ -170,3 +186,4 @@
     }
   }
 }
+
