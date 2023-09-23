@@ -13,6 +13,12 @@
     border-image: linear-gradient(to left top, var(--bg-text1) 10%, transparent 30%, transparent 70%, var(--bg-text1) 90%);
     // border-image: linear-gradient(to left top, #502053 10%, transparent 30%, transparent 70%, #502053 90%);
     border-image-slice: 1;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     &__photo {
       max-width: 320px;
