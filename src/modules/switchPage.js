@@ -1,5 +1,5 @@
 export function switchPage(link, page, menuClose) {
-
+  
   link.addEventListener('click', (el) => {
     let activePage = document.querySelector('._show._page');
     let activeLink = document.querySelector('.nav__item._active');

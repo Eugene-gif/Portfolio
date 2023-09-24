@@ -1,12 +1,55 @@
 .page {
-  // width: clamp(30ch, 100%, 90ch);
+  margin-bottom: 40px;
 
-  &__section {
-    margin-bottom: 40px;
+  &__btn {
+    @extend .card__link;
+    display: block;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 38px;
+
+    @media(min-width: 600px) {
+      max-width: 350px;
+      font-size: 42px;
+    }
   }
 }
 
-// @import './_home.scss';
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 60px;
+
+  @media(min-width: 725px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 20px;
+  }
+
+  @media(min-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .card:nth-child(2n) {
+      flex-direction: row-reverse;
+
+      .card__title,
+      .card__subtitle,
+      .card__description {
+        text-align: right;
+      }
+
+      .card__links {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
 @import '@/pages/home/_home.scss';
-@import './_catalog.scss';
-@import './_contacts.scss';

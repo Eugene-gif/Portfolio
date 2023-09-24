@@ -4,7 +4,7 @@ body {
   .header {
     --bg: #15665d;
     --bg-text: #f7e0be;
-    --active: #d0ce43;
+    // --active: #d0ce43;
   }
 
   .base-layout {
@@ -29,15 +29,15 @@ body {
 
 .dark {
   --bg: #242424;
+  --active: #a08fd1;
 
   .header {
     --bg: #312a3f;
     --bg-text: #d2cfd7;
-    --active: #a08fd1;
   }
 
   .base-layout {
-    --bg: #242424; // этот
+    --bg: #242424;
     --bg-text: #d2cfd7;
     --bg-text1: #a08fd1;
 
@@ -47,6 +47,14 @@ body {
     h4,
     h5 {
       color: var(--bg-text1);
+    }
+
+    a {
+      color: #4A4453;
+    }
+
+    .card {
+      --bg-text2: #766697;
     }
   }
 

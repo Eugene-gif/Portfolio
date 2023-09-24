@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 20px;
+  padding: 15px;
   border: 5px solid transparent;
   border-image: linear-gradient(to left top, #f8d0d0 10%, transparent 30%, transparent 70%, #f8d0d0 90%);
   border-image-slice: 1;
@@ -13,18 +13,25 @@
     img {
       width: 100%;
       height: 100%;
+      display: block;
       object-fit: cover;
+      filter: drop-shadow(0 0 4px var(--bg-text1));
+      border-radius: 8px;
     }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
     color: var(--bg-text1);
-    font-size: 42px;
+    font-size: clamp(2.25rem, 1.6346rem + 3.0769vw, 4.25rem);
     line-height: 1;
     font-weight: 300;
     margin-bottom: 15px;
     text-align: center;
-    // margin-top: -10px;
   }
 
   &__subtitle {
@@ -42,56 +49,45 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin-top: auto;
+
     @media (max-width: 380px) {
       flex-direction: column;
     }
   }
 
   &__link {
-    // color: #17665e;
     --bg: #15665d;
     color: var(--bg);
     background-color: var(--bg-text1);
     padding: 5px 10px;
     text-align: center;
     border-radius: 4px;
-    transition: opacity .3s;
-
-    &:hover {
-      opacity: 0.7;
-    }
   }
 
-  // &:nth-child(2n) {
-  //   flex-direction: row-reverse;
+  @media(min-width: 1000px) {
+    flex-direction: row;
+    gap: 30px;
+    border: none;
 
-  //   .card__text {
-  //     align-items: flex-start;
-  //   }
+    .box {
+      width: 50%;
+    }
+    
+    &__title, 
+    &__subtitle, 
+    &__description {
+      text-align: left;
+    }
 
-  //   .card__title {
-  //     text-align: start;
-  //   }
+    &__links {
+      justify-content: flex-start;
+      gap: 20px;
+    }
 
-  //   .card__description {
-  //     text-align: start;
-  //   }
-
-  //   .card__links {
-  //     flex-direction: row-reverse;
-  //   }
-  // }
-
-  // @media(min-width: 868px) {
-  //   flex-direction: row;
-  //   gap: 40px;
-
-  //   &__img {
-  //     width: 50%;
-  //   }
-
-  //   &__text {
-  //     width: 50%;
-  //   }
-  // }
+    &__link {
+      padding: 8px 15px;
+      font-size: 20px;
+    }
+  }
 }
