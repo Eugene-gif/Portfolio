@@ -12,8 +12,8 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Портфолио | Zuev</title>
-  <script type="module" crossorigin src="/Portfolio/assets/index-818c6232.js"></script>
-  <link rel="stylesheet" href="/Portfolio/assets/index-d2816ca1.css">
+  <script type="module" crossorigin src="/Portfolio/assets/index-12ca3e12.js"></script>
+  <link rel="stylesheet" href="/Portfolio/assets/index-9c3b3f96.css">
 </head>
 
 <body>
@@ -182,74 +182,7 @@
       Я фронтенд-разработчик, моё любимое хобби - верстать сайты🙂</h2>
   </div>
 
-  <ul class="projects-list">
-    <div class="card">
-  <div class="card__img box">
-    <img src="/Portfolio/assets/Borodinski-73589b7e.webp" alt="Image project">
-  </div>
-
-  <div class="card__text box">
-    <h3 class="card__title">Cards Gallery</h3>
-    <p class="card__subtitle">Описание проекта</p>
-    <p class="card__description">
-      Это красивая карточная галерея для просмотра фотографий. По нажатию
-      реализуется показ картинки.
-      Технологии - html, css, js. Логика реализована на чистом JavaScript.
-      Адаптация под все типы экранов.
-    </p>
-    <div class="card__links">
-      <a class="card__link" href="#" target="_blank">Исходный
-        код</a>
-      <a class="card__link" href="#" target="_blank">Посмотреть
-        проект</a>
-    </div>
-  </div>
-</div>
-    <div class="card">
-  <div class="card__img box">
-    <img src="/Portfolio/assets/Borodinski-73589b7e.webp" alt="Image project">
-  </div>
-
-  <div class="card__text box">
-    <h3 class="card__title">Cards Gallery</h3>
-    <p class="card__subtitle">Описание проекта</p>
-    <p class="card__description">
-      Это красивая карточная галерея для просмотра фотографий. По нажатию
-      реализуется показ картинки.
-      Технологии - html, css, js. Логика реализована на чистом JavaScript.
-      Адаптация под все типы экранов.
-    </p>
-    <div class="card__links">
-      <a class="card__link" href="#" target="_blank">Исходный
-        код</a>
-      <a class="card__link" href="#" target="_blank">Посмотреть
-        проект</a>
-    </div>
-  </div>
-</div>
-    <div class="card">
-  <div class="card__img box">
-    <img src="/Portfolio/assets/Borodinski-73589b7e.webp" alt="Image project">
-  </div>
-
-  <div class="card__text box">
-    <h3 class="card__title">Cards Gallery</h3>
-    <p class="card__subtitle">Описание проекта</p>
-    <p class="card__description">
-      Это красивая карточная галерея для просмотра фотографий. По нажатию
-      реализуется показ картинки.
-      Технологии - html, css, js. Логика реализована на чистом JavaScript.
-      Адаптация под все типы экранов.
-    </p>
-    <div class="card__links">
-      <a class="card__link" href="#" target="_blank">Исходный
-        код</a>
-      <a class="card__link" href="#" target="_blank">Посмотреть
-        проект</a>
-    </div>
-  </div>
-</div>
-  </ul>
+  <ul class="home__list cards-list"></ul>
   <a class="home__btn page__btn" href="#catalog">Больше работ</a>
 </section>
     <section class="container page _page" id="catalog" data-page="catalog">
@@ -260,6 +193,30 @@
     Контакты
   </h2>
 </section>
+    <template id="card">
+  <div class="card">
+    <div class="card__img box">
+      <img src="/src/img/images/projects/Borodinski.webp" alt="Image project">
+    </div>
+
+    <div class="card__text box">
+      <h3 class="card__title"></h3>
+      <p class="card__subtitle">Описание проекта</p>
+      <p class="card__description">
+        Это красивая карточная галерея для просмотра фотографий. По нажатию
+        реализуется показ картинки.
+        Технологии - html, css, js. Логика реализована на чистом JavaScript.
+        Адаптация под все типы экранов.
+      </p>
+      <div class="card__links">
+        <a class="card__link code" href="#" target="_blank">Исходный
+          код</a>
+        <a class="card__link project" href="#" target="_blank">Посмотреть
+          проект</a>
+      </div>
+    </div>
+  </div>
+</template>
   </main>
   <footer class="footer">
   <div class="container">
