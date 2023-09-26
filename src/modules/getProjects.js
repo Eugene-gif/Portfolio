@@ -7,12 +7,12 @@ const getProjects = async () => {
   const projects = await getData(url);
 
   try {
-    projects.forEach((el) => cachedProjects.push(el));
+    await projects.forEach((el) => cachedProjects.push(el));
   } catch (error) {
     console.error(error.message);
   }
 }
 
-await getProjects();
+getProjects();
 
 export { cachedProjects, getProjects };
