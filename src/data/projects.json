@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "img": "Borodinski.webp",
+    "name": "Барбершоп Borodinski",
+    "text": "Какое-то краткое описание проекта 1",
+    "urlCode": "url-code-Borodinski", 
+    "urlProject": "url-project-Borodinski"
+  },
+  {
+    "id": 2,
+    "img": "Cards-gallery.webp",
+    "name": "Cards-gallery",
+    "text": "Какое-то краткое описание проекта №2",
+    "urlCode": "url-code-cards-gallery", 
+    "urlProject": "url-project-cards-gallery"
+  },
+  {
+    "id": 3,
+    "img": "Desire.webp",
+    "name": "Desire",
+    "text": "Какое-то краткое описание проекта №3",
+    "urlCode": "url-code-desire", 
+    "urlProject": "url-project-desire"
+  },
+  {
+    "id": 4,
+    "img": "Pink.webp",
+    "name": "Pink",
+    "text": "Какое-то краткое описание проекта №4",
+    "urlCode": "url-code-pink", 
+    "urlProject": "url-project-pink"
+  },
+  {
+    "id": 5,
+    "img": "V-slider.webp",
+    "name": "V-slider",
+    "text": "Какое-то краткое описание проекта №5",
+    "urlCode": "url-code_v-slider", 
+    "urlProject": "url-project_v-slider"
+  }
+]
