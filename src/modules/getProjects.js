@@ -1,10 +1,10 @@
 import getData from "./getData";
+import URL from "@/utils/url.js";
 
 const cachedProjects = [];
 
 const getProjects = async () => {
-  const url = 'https://raw.githubusercontent.com/Eugene-gif/data/main/Portfolio/projects.json';
-  const projects = await getData(url);
+  const projects = await getData(URL);
 
   try {
     projects.forEach((el) => cachedProjects.push(el));
@@ -12,7 +12,5 @@ const getProjects = async () => {
     console.error(error.message);
   }
 }
-
-// getProjects();
 
 export { cachedProjects, getProjects };

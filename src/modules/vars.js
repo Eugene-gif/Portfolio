@@ -1,4 +1,4 @@
-let mask = document.querySelector('.mask');
+const mask = document.querySelector('.mask');
 // Ссылки в меню
 const links = document.querySelectorAll('.nav__item a');
 // Существующие страницы

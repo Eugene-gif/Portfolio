@@ -90,4 +90,11 @@
       font-size: 20px;
     }
   }
+
+  @media (min-width: 640px) and (max-height: 768px) and (orientation: landscape) {
+    &__img {
+      height: 60vh;
+      max-height: 300px;
+    }
+  }
 }
