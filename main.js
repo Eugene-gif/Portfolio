@@ -3,7 +3,7 @@ import { closeMenu } from "@/utils/menu";
 import { switchPage } from "@/utils/switchPage";
 import { loadPage } from "@/modules/loadPage";
 import { setupTheme } from "@/utils/setupTheme";
-import { mask, links, pages, moreProjects, linkHome, homeList, catalogList } from "@/modules/vars";
+import { mask, links, pages, followProjects, followContacts, linkHome, homeList, catalogList } from "@/modules/vars";
 import displayProjects from "@/modules/displayProjects";
 
 
@@ -16,13 +16,18 @@ window.addEventListener('load', async () => {
     switchPage(links[i], pages[i], closeMenu);
   }
 
-  moreProjects.addEventListener('click', () => {
+  linkHome.addEventListener('click', () => {
+    const link = document.querySelector(".nav__item [data-link='home']");
+    link.click();
+  });
+
+  followProjects.addEventListener('click', () => {
     const link = document.querySelector(".nav__item [data-link='catalog']");
     link.click();
   });
 
-  linkHome.addEventListener('click', () => {
-    const link = document.querySelector(".nav__item [data-link='home']");
+  followContacts.addEventListener('click', () => {
+    const link = document.querySelector(".nav__item [data-link='contacts']");
     link.click();
   });
 

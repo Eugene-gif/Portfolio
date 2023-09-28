@@ -6,7 +6,6 @@ export function toggleMenu() {
   overlay.classList.toggle('_show');
   nav.classList.toggle('_show');
   document.body.classList.toggle('_lock');
-  nav.querySelector('._active a').focus();
 }
 
 export function closeMenu() {
@@ -18,16 +17,3 @@ export function closeMenu() {
 
 btn.addEventListener('input', toggleMenu);
 overlay.addEventListener('click', closeMenu);
-document.addEventListener('keyup', (evt) => {
-  // if (evt.key === 'Escape' && btn.checked) {
-  //   closeMenu();
-  // }
-
-  if (evt.key === 'Escape') {
-    toggleMenu();
-    btn.checked = !btn.checked;
-  }
-})
-
-// export const toggleMenu = toggleMenu;
-// export const closeMenu = closeMenu;
