@@ -4,7 +4,8 @@
   gap: 10px;
   padding: 15px;
   border: 5px solid transparent;
-  border-image: linear-gradient(to left top, #f8d0d0 10%, transparent 30%, transparent 70%, #f8d0d0 90%);
+  border-image: linear-gradient(to left top, var(--border-color) 10%, transparent 30%, transparent 70%, var(--border-color) 90%);
+
   border-image-slice: 1;
 
   &__img {
@@ -23,6 +24,7 @@
   &__text {
     display: flex;
     flex-direction: column;
+    height: 100%;
   }
 
   &__title {
@@ -73,9 +75,9 @@
     .box {
       width: 50%;
     }
-    
-    &__title, 
-    &__subtitle, 
+
+    &__title,
+    &__subtitle,
     &__description {
       text-align: left;
     }

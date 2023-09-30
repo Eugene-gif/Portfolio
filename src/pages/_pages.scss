@@ -25,6 +25,38 @@
   gap: 60px;
   margin-bottom: 60px;
 
+  .card:nth-child(2n) {
+    --border-color: #b9f6ca;
+  }
+  
+  .card:nth-child(3n) {
+    --border-color: #8c9eff;
+  }
+  .card:nth-child(4n) {
+    --border-color: #ffff8d;
+  }
+  
+  .card:nth-child(5n) {
+    --border-color: #ff80ab;
+  }
+  
+  .card:nth-child(6n) {
+    --border-color: #a7ffeb;
+  }
+  
+  .card:nth-child(7n) {
+    --border-color: #ffd180;
+  }
+  
+  .card:nth-child(8n) {
+    --border-color: #80d8ff;
+  }
+
+  .card:nth-child(9n) {
+    --border-color: #b388ff;
+  }
+
+
   @media(min-width: 725px) {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
