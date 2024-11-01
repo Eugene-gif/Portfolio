@@ -5,7 +5,9 @@ import { loadPage } from "@/modules/loadPage";
 import { setupTheme } from "@/utils/setupTheme";
 import { mask, links, pages, followProjects, followContacts, followHome, homeList, catalogList } from "@/utils/vars";
 import displayProjects from "@/modules/displayProjects";
+import { testFun } from "@/modules/test";
 
+testFun();
 
 window.addEventListener('load', async () => {
   await getProjects();
