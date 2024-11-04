@@ -1,7 +1,7 @@
-export function loadPage(links, pages, setupTheme) {
-  let mask = document.querySelector('.mask');
-  let currentLink = document.querySelector('.nav__item._active');
-  let currentPage = document.querySelector('._page._show');
+export function loadPage(links : NodeListOf<HTMLAnchorElement>, pages : NodeListOf<HTMLDivElement>, setupTheme : () => void) {
+  let mask = document.querySelector<HTMLDivElement>('.mask')!;
+  let currentLink = document.querySelector<HTMLAnchorElement>('.nav__item._active')!;
+  let currentPage = document.querySelector<HTMLDivElement>('._page._show')!;
   let hash = window.location.hash.slice(1);
 
   setupTheme();
@@ -9,6 +9,7 @@ export function loadPage(links, pages, setupTheme) {
 
   for (let i = 0; i < links.length; i++) {
     let link = links[i].closest('.nav__item');
+    if (!link) throw Error('Ошибка типа link!');
     let page = pages[i];
 
     if (hash === page.id) {

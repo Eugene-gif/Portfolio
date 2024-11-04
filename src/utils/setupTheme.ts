@@ -1,5 +1,9 @@
 export function setupTheme() {
-  const switcher = document.querySelector('.theme-btn #toggle');
+  const switcher = document.querySelector<HTMLInputElement>('.theme-btn #toggle');
+
+  if (!switcher) {
+    throw Error('Нет ноды!');
+  }
 
   switcher.addEventListener('input', switchTheme);
   switcher.checked = true;
@@ -10,6 +14,10 @@ export function setupTheme() {
   }
 
   function switchTheme() {
+    if (!switcher) {
+      throw Error('Нет ноды!');
+    }
+
     if (!switcher.checked) {
       localStorage.setItem('theme', 'dark')
       document.body.classList.add('dark');
