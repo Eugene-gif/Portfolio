@@ -19,4 +19,22 @@ window.addEventListener('load', async () => {
   }
 
   loadPage(links, pages, setupTheme);
+  
+  if (followHome && followProjects && followContacts) {
+    followHome.addEventListener('click', () => {
+      const link: HTMLAnchorElement | null = document.querySelector(".nav__item [data-link='home']");
+      link!.click();
+    });
+  
+    followProjects.addEventListener('click', () => {
+      const link: HTMLAnchorElement | null = document.querySelector(".nav__item [data-link='catalog']");
+      link!.click();
+    });
+  
+    followContacts.addEventListener('click', () => {
+      const link: HTMLAnchorElement | null = document.querySelector(".nav__item [data-link='contacts']");
+      link!.click();
+    });
+  }
 });
+
