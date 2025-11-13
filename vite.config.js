@@ -3,7 +3,8 @@ import { resolve } from 'path';
 import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig({
-	base: "/Portfolio",
+	base: "/Portfolio", // для дева
+  // base: "/", // для прода
 	server: {
     open: true,
     host: true,

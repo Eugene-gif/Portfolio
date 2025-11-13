@@ -1,29 +1,32 @@
 export function setupTheme() {
-  const switcher = document.querySelector<HTMLInputElement>('.theme-btn #toggle');
+  const switcher = document.querySelector<HTMLInputElement>('[data-theme]');
 
   if (!switcher) {
     throw Error('Нет ноды!');
   }
 
-  switcher.addEventListener('input', switchTheme);
-  switcher.checked = true;
-
   if (localStorage.getItem('theme') === 'dark') {
-    switcher.checked = false;
+    switcher.dataset.theme = 'dark';
     document.body.classList.add('dark');
   }
 
-  function switchTheme() {
+  function setTheme() {
     if (!switcher) {
       throw Error('Нет ноды!');
     }
 
-    if (!switcher.checked) {
-      localStorage.setItem('theme', 'dark')
+    const currentTheme = localStorage.getItem('theme'); // 'light' | 'dark' | null
+    if (currentTheme === null || currentTheme === 'light') {
+      switcher.dataset.theme = 'dark';
       document.body.classList.add('dark');
-    } else {
-      localStorage.setItem('theme', 'light');
+      localStorage.setItem('theme', 'dark');
+    }
+    if (currentTheme === 'dark') {
+      switcher.dataset.theme = 'light';
       document.body.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
   }
+
+  switcher.addEventListener('click', setTheme);
 }
