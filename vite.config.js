@@ -3,14 +3,16 @@ import { resolve } from 'path';
 import injectHTML from 'vite-plugin-html-inject';
 
 export default defineConfig({
-	base: "/Portfolio", // для дева
-  // base: "/", // для прода
-	server: {
+  base: process.env.IS_HOST === 'true' ? "/" : '/Portfolio',
+  build: {
+    outDir: process.env.IS_HOST === 'true' ? 'public_html' : 'dist',
+  },
+  server: {
     open: true,
     host: true,
   },
-	plugins: [injectHTML()],
-	resolve: {
+  plugins: [injectHTML()],
+  resolve: {
     alias: { '@': resolve(__dirname, './src') }
   },
 });
